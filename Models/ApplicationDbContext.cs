@@ -8,7 +8,7 @@ namespace Portfolio.Models
 {
     public class ApplicationDbContext: DbContext
     {
-        public ApplicationDbContext() : base("PortafolioConnection")
+        public ApplicationDbContext() : base("PortfolioConnection")
         {
         }
 
