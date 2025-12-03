@@ -13,5 +13,8 @@ namespace Portfolio.Models
         public string Url { get; set; }
         public string ImageUrl { get; set;  }
 
+        // Relación con entidad Student Profile
+        public int StudentProfileId { get; set; }
+        public StudentProfile StudentProfile { get; set; }
     }
 }
