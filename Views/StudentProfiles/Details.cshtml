@@ -1,0 +1,39 @@
+﻿@model Portfolio.Models.StudentProfile
+
+@{
+    ViewBag.Title = "Profile Details";
+}
+
+<h2>@Model.FullName</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Title</dt>
+        <dd>@Model.Title</dd>
+
+        <dt>Email</dt>
+        <dd>@Model.Email</dd>
+
+        <dt>Phone</dt>
+        <dd>@Model.Phone</dd>
+
+        <dt>Location</dt>
+        <dd>@Model.Location</dd>
+
+        <dt>Summary</dt>
+        <dd>@Model.Summary</dd>
+
+        <dt>Profile Image</dt>
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.ProfileImageUrl))
+            {
+                <img src="@Model.ProfileImageUrl" width="150" />
+            }
+        </dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

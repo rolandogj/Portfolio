@@ -9,7 +9,7 @@ namespace Portfolio.Models
     {
         public int Id { get; set; }
         public string Institution { get; set; }
-        public string Degrre { get; set; } // ejemplo: Ingeniaria en Sistemas
+        public string Degree { get; set; } // ejemplo: Ingeniaria en Sistemas
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; } // null = en curso
 

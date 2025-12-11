@@ -1,0 +1,31 @@
+﻿@model Portfolio.Models.Projects
+
+@{
+    ViewBag.Title = "Project Details";
+}
+
+<h2>@Model.Title</h2>
+
+<dl class="dl-horizontal">
+    <dt>Description</dt>
+    <dd>@Model.Description</dd>
+
+    <dt>Link</dt>
+    <dd><a href="@Model.Url" target="_blank">@Model.Url</a></dd>
+
+    <dt>Image</dt>
+    <dd>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" width="200" />
+        }
+    </dd>
+
+    <dt>Student</dt>
+    <dd>@Model.StudentProfile.FullName</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

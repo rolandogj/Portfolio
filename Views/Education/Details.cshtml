@@ -1,0 +1,29 @@
+﻿@model Portfolio.Models.Education
+
+@{
+    ViewBag.Title = "Education Details";
+}
+
+<h2>@Model.Degree</h2>
+
+<dl class="dl-horizontal">
+    <dt>Institution</dt>
+    <dd>@Model.Institution</dd>
+
+    <dt>Start</dt>
+    <dd>@Model.StartDate.ToShortDateString()</dd>
+
+    <dt>End</dt>
+    <dd>@(Model.EndDate?.ToShortDateString() ?? "Present")</dd>
+
+    <dt>Description</dt>
+    <dd>@Model.Institution</dd>
+
+    <dt>Student</dt>
+    <dd>@Model.StudentProfile.FullName</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

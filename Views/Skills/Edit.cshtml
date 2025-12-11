@@ -1,0 +1,36 @@
+﻿@model Portfolio.Models.Skills
+
+@{
+    ViewBag.Title = "Edit Skill";
+}
+
+<h2>Edit Skill</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Level)
+            @Html.TextBoxFor(m => m.Level, new { @class = "form-control", type = "number" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Student")
+            @Html.DropDownList("StudentProfileId", null, "-- Select --", new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+
+    </div>
+}
+
+<p>@Html.ActionLink("Back to List", "Index")</p>

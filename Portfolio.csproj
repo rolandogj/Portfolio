@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202511160649463_PortfolioDB.Designer.cs">
       <DependentUpon>202511160649463_PortfolioDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202512061701121_InitialCreate.cs" />
+    <Compile Include="Migrations\202512061701121_InitialCreate.Designer.cs">
+      <DependentUpon>202512061701121_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Education.cs" />
@@ -203,6 +207,36 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Education\Create.cshtml" />
+    <Content Include="Views\Education\Delete.cshtml" />
+    <Content Include="Views\Education\Details.cshtml" />
+    <Content Include="Views\Education\Edit.cshtml" />
+    <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Experience\Create.cshtml" />
+    <Content Include="Views\Experience\Delete.cshtml" />
+    <Content Include="Views\Experience\Details.cshtml" />
+    <Content Include="Views\Experience\Edit.cshtml" />
+    <Content Include="Views\Experience\Index.cshtml" />
+    <Content Include="Views\Projects\Create.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Details.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\Skills\Create.cshtml" />
+    <Content Include="Views\Skills\Delete.cshtml" />
+    <Content Include="Views\Skills\Details.cshtml" />
+    <Content Include="Views\Skills\Edit.cshtml" />
+    <Content Include="Views\Skills\Index.cshtml" />
+    <Content Include="Views\SocialLinks\Create.cshtml" />
+    <Content Include="Views\SocialLinks\Delete.cshtml" />
+    <Content Include="Views\SocialLinks\Details.cshtml" />
+    <Content Include="Views\SocialLinks\Edit.cshtml" />
+    <Content Include="Views\SocialLinks\Index.cshtml" />
+    <Content Include="Views\StudentProfiles\Create.cshtml" />
+    <Content Include="Views\StudentProfiles\Delete.cshtml" />
+    <Content Include="Views\StudentProfiles\Details.cshtml" />
+    <Content Include="Views\StudentProfiles\Edit.cshtml" />
+    <Content Include="Views\StudentProfiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +271,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202511160649463_PortfolioDB.resx">
       <DependentUpon>202511160649463_PortfolioDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202512061701121_InitialCreate.resx">
+      <DependentUpon>202512061701121_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

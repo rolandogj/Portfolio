@@ -1,0 +1,30 @@
+﻿@model Portfolio.Models.Experience
+
+@{
+    ViewBag.Title = "Experience Details";
+}
+
+<h2>@Model.Position</h2>
+
+<dl class="dl-horizontal">
+    <dt>Company</dt>
+    <dd>@Model.Company</dd>
+
+    <dt>Start Date</dt>
+    <dd>@Model.StartDate.ToShortDateString()</dd>
+
+    <dt>End Date</dt>
+    <dd>@(Model.EndDate?.ToShortDateString() ?? "Present")</dd>
+
+    <dt>Description</dt>
+    <dd>@Model.Description</dd>
+
+    <dt>Student</dt>
+    <dd>@Model.StudentProfile.FullName</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
